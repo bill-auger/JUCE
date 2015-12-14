@@ -1,1 +1,11 @@
-Hello World
+<html><head><title></title></head>
+
+<body>
+
+  <script>
+    var docs_url = "https://" + window.location.hostname + "/JUCE/doxygen/doc/index.html" ;
+    document.write("docs are at <a href=\"" + docs_url + "\">" + docs_url + "</a>") ;
+    window.onload = function() { window.location = docs_url ; } ;
+  </script>
+
+</body></html>

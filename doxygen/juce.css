@@ -1,0 +1,48 @@
+html { background-color: #111 ; color: #fff ; }
+
+body , div , p , dl ,
+div.qindex , div.navtab ,
+div.fragment , div.ah , span.ah ,
+h2.groupheader ,
+.mdescLeft , .mdescRight ,
+.memItemLeft , .memItemRight ,
+.memTemplItemLeft , .memTemplItemRight, .memTemplParams ,
+.memtemplate , .memnav ,
+.memproto , dl.reflist dt ,
+.memdoc , dl.reflist dd ,
+.directory tr.even ,
+.directory .levels span ,
+address ,
+.fieldtable th ,
+.navpath li ,.navpath li.navelem a ,
+.navpath li.navelem a:hover ,
+.navpath li.footer ,
+div.header ,
+dl.citelist dt ,
+div.toc ,
+#powerTip div.ttdeci
+{ background-color: #111 ; color: #fff ; }
+
+a
+{ color: #fc0 ; }
+
+.contents a:visited
+{ color: #d80 ; }
+
+.paramname { color: #C08062 }
+
+.memproto , dl.reflist dt
+{ text-shadow: 0px 1px 1px rgba(0 , 0 , 0 , 0.9) ; background-image: url('nav_f.png') ; }
+
+span .right ,
+blockquote , pre.fragment
+{ background-color: #000 ; color: #fff ; }
+
+span.lineno , span.lineno a
+{ background-color: #222 ; color: #fff ; }
+
+span.comment
+{ color: #008000 ; }
+
+.memtemplate
+{ background: transparent; }
