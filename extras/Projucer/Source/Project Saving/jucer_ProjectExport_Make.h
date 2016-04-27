@@ -26,7 +26,7 @@ class MakefileProjectExporter  : public ProjectExporter
 {
 public:
     //==============================================================================
-    static const char* getNameLinux()           { return "Linux Makefile"; }
+    static const char* getNameLinux()           { return "Makefile"; }
     static const char* getValueTreeTypeName()   { return "LINUX_MAKE"; }
 
     Value getExtraPkgConfig()                   { return getSetting (Ids::linuxExtraPkgConfig); }
@@ -44,12 +44,15 @@ public:
     //==============================================================================
     MakefileProjectExporter (Project& p, const ValueTree& t)   : ProjectExporter (p, t)
     {
-        name = getNameLinux();
+        this->name = getNameLinux() ;
 
         if (getTargetLocationString().isEmpty())
-            getTargetLocationValue() = getDefaultBuildsRootFolder() + "LinuxMakefile";
+            getTargetLocationValue() = getDefaultBuildsRootFolder() + this->name ;
 
         initialiseDependencyPathValues();
+
+        this->installCmd   = makeRecipe(Ids::InstallRecipe   , DEFAULT_INSTALL_CMD  ) ;
+        this->uninstallCmd = makeRecipe(Ids::UninstallRecipe , DEFAULT_UNINSTALL_CMD) ;
     }
 
     //==============================================================================
@@ -107,6 +110,8 @@ public:
 
         MemoryOutputStream mo;
         writeMakefile (mo, files);
+
+DBG("Writing Makefile =>\n" + mo.toString()) ;
 
         overwriteFileIfDifferentOrThrow (getTargetFolder().getChildFile ("Makefile"), mo);
     }
@@ -386,6 +391,17 @@ private:
             << "endif" << newLine
             << newLine;
 
+        out << "ifndef DESTDIR"                 << newLine
+            << "  DESTDIR="                     << newLine
+            << "endif"                          << newLine
+            <<                                     newLine ;
+        out << "ifndef PREFIX"                  << newLine
+            << "  PREFIX=/usr"                  << newLine
+            << "endif"                          << newLine
+            <<                                     newLine ;
+        out << "INSTALLDIR=$(DESTDIR)$(PREFIX)" << newLine
+            <<                                     newLine ;
+
         for (ConstConfigIterator config (*this); config.next();)
             writeConfig (out, *config);
 
@@ -426,6 +442,16 @@ private:
 
             out << newLine << newLine;
         }
+
+        out << "install:" <<                              newLine
+            << "\t@echo Installing "   << projectName  << newLine
+            << "\t"                    << installCmd   << newLine
+            <<                                            newLine ;
+
+        out << "uninstall:" <<                            newLine
+            << "\t@echo Uninstalling " << projectName  << newLine
+            << "\t"                    << uninstallCmd << newLine
+            <<                                            newLine ;
 
         out << "clean:" << newLine
             << "\t@echo Cleaning " << projectName << newLine
@@ -477,6 +503,22 @@ private:
                                                                 Ids::vst3Path,
                                                                 TargetOS::linux)));
     }
+
+    String makeRecipe(const Identifier& settings_key , const String& default_recipe) const
+    {
+        String      recipe = settings[settings_key].toString() ;
+        StringArray steps  = StringArray::fromLines(recipe) ;
+        steps.trim() ; steps.removeEmptyStrings() ;
+
+        return (steps.size() > 0) ? steps.joinIntoString(newLine + "\t") : default_recipe ;
+    }
+
+
+    const String DEFAULT_INSTALL_CMD   = "@install -m 755 $(OUTDIR)/$(TARGET) $(INSTALLDIR)/bin/" ;
+    const String DEFAULT_UNINSTALL_CMD = "@rm $(INSTALLDIR)/bin/$(TARGET) > /dev/null" ;
+    String       installCmd ;
+    String       uninstallCmd ;
+
 
     JUCE_DECLARE_NON_COPYABLE (MakefileProjectExporter)
 };

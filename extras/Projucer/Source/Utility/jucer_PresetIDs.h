@@ -179,6 +179,8 @@ namespace Ids
     DECLARE_ID (linuxExtraPkgConfig);
     DECLARE_ID (font);
     DECLARE_ID (colour);
+    DECLARE_ID (InstallRecipe);
+    DECLARE_ID (UninstallRecipe);
     DECLARE_ID (userNotes);
     DECLARE_ID (maxBinaryFileSize);
     DECLARE_ID (includeBinaryInAppConfig);

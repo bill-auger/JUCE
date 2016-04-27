@@ -285,6 +285,15 @@ void ProjectExporter::createIconProperties (PropertyListBuilder& props)
 
     props.add (new ChoicePropertyComponent (getBigIconImageItemID(), "Icon (large)", choices, ids),
                "Sets an icon to use for the executable.");
+
+    props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
+              "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
+
+    props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
+              "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
+
+    props.add (new TextPropertyComponent (getUserNotes(), "Notes", 32768, true),
+               "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
 }
 
 //==============================================================================
