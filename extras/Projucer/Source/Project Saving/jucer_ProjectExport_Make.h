@@ -49,10 +49,10 @@ public:
         if (getTargetLocationString().isEmpty())
             getTargetLocationValue() = getDefaultBuildsRootFolder() + this->name ;
 
-        initialiseDependencyPathValues();
-
         this->installCmd   = makeRecipe(Ids::InstallRecipe   , DEFAULT_INSTALL_CMD  ) ;
         this->uninstallCmd = makeRecipe(Ids::UninstallRecipe , DEFAULT_UNINSTALL_CMD) ;
+
+        initialiseDependencyPathValues();
     }
 
     //==============================================================================
@@ -141,6 +141,7 @@ protected:
 
         Value getArchitectureType()             { return getValue (Ids::linuxArchitecture); }
         var getArchitectureTypeVar() const      { return config [Ids::linuxArchitecture]; }
+//        String getArchitectureTypeString() const    { return config [Ids::linuxArchitecture]; }
 
         var getDefaultOptimisationLevel() const override    { return var ((int) (isDebug() ? gccO0 : gccO3)); }
 
@@ -472,7 +473,7 @@ private:
                 out << "$(JUCE_OBJDIR)/" << escapeSpaces (getObjectFileFor (files.getReference(i)))
                     << ": " << escapeSpaces (files.getReference(i).toUnixStyle()) << newLine
                     << "\t-@mkdir -p $(JUCE_OBJDIR)" << newLine
-                    << "\t@echo \"Compiling " << files.getReference(i).getFileName() << "\"" << newLine
+                    << "\t@echo \"Compiling " << files.getReference(i).getFileName() << " ($(CONFIG))\"" << newLine
                     << (files.getReference(i).hasFileExtension ("c;s;S") ? "\t@$(CC) $(JUCE_CFLAGS) -o \"$@\" -c \"$<\""
                                                                          : "\t@$(CXX) $(JUCE_CXXFLAGS) -o \"$@\" -c \"$<\"")
                     << newLine << newLine;
