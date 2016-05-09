@@ -224,6 +224,7 @@ private:
 
         searchPaths = getCleanedStringArray (searchPaths);
 
+        // user-defined per-config "Header search paths"
         // Replace ~ character with $(HOME) environment variable
         for (int i = 0; i < searchPaths.size(); ++i)
             out << " -I" << escapeSpaces (FileHelpers::unixStylePath (replacePreprocessorTokens (config, searchPaths[i]))).replace ("~", "$(HOME)");
@@ -254,7 +255,9 @@ private:
                 out << " " << getCleanedStringArray (flags).joinIntoString (" ");
         }
 
-        out << config.getGCCLibraryPathFlags();
+        // user-defined global and per-config "Extra library search paths"
+        out << config.getGCCLibraryPathFlags (getExporterLibrarySearchPathString() + ";" +
+                                              config.getConfigLibrarySearchPathString());
 
         StringArray packages;
         packages.addTokens (getExtraPkgConfigString(), " ", "\"'");
@@ -280,9 +283,11 @@ private:
         libraries.addTokens (getExternalLibrariesString(), ";", "\"'");
         libraries.removeEmptyStrings();
 
+        // user-defined global "External libraries to link"
         if (libraries.size() != 0)
             out << " -l" << replacePreprocessorTokens (config, libraries.joinIntoString (" -l")).trim();
 
+        // user-defined global "Extra Linker Flags"
         out << " " << replacePreprocessorTokens (config, getExtraLinkerFlagsString()).trim()
             << newLine;
     }
@@ -320,8 +325,11 @@ private:
         if (makefileIsDLL)
             out << " -fPIC";
 
+//         String flags_string = getExtraCompilerFlagsString() + ";" +
+//                               config.getConfigCompilerFlagsString();
+        String flags_string = getExtraCompilerFlagsString();
         out << " -O" << config.getGCCOptimisationFlag()
-            << (" "  + replacePreprocessorTokens (config, getExtraCompilerFlagsString())).trimEnd()
+            << (" "  + replacePreprocessorTokens (config, flags_string)).trimEnd()
             << newLine;
 
         String cppStandardToUse (getCppStandardString());

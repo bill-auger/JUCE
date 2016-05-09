@@ -120,14 +120,22 @@ public:
     Value getTargetLocationValue()              { return getSetting (Ids::targetFolder); }
     String getTargetLocationString() const      { return getSettingString (Ids::targetFolder); }
 
+//     Value getExporterHeaderSearchPathValue()                    { return getSetting (Ids::headerPath); }
+//     String getExporterHeaderSearchPathString() const            { return getSettingString (Ids::headerPath); }
+
     Value getExtraCompilerFlags()               { return getSetting (Ids::extraCompilerFlags); }
     String getExtraCompilerFlagsString() const  { return getSettingString (Ids::extraCompilerFlags).replaceCharacters ("\r\n", "  "); }
+
+    Value getExporterLibrarySearchPathValue()                   { return getSetting (Ids::libraryPath); }
+    String getExporterLibrarySearchPathString() const           { return getSettingString (Ids::libraryPath); }
 
     Value getExtraLinkerFlags()                 { return getSetting (Ids::extraLinkerFlags); }
     String getExtraLinkerFlagsString() const    { return getSettingString (Ids::extraLinkerFlags).replaceCharacters ("\r\n", "  "); }
 
     Value getExternalLibraries()                { return getSetting (Ids::externalLibraries); }
     String getExternalLibrariesString() const   { return getSearchPathsFromString (getSettingString (Ids::externalLibraries)).joinIntoString (";"); }
+// was like the others above
+//  String getExternalLibrariesString() const   { return getSettingString (Ids::externalLibraries).replaceCharacters ("\r\n", " ;"); }
 
     Value getInstallRecipe()                    { return getSetting (Ids::InstallRecipe); }
 
@@ -240,14 +248,30 @@ public:
         String getBuildConfigPreprocessorDefsString() const { return config [Ids::defines]; }
         StringPairArray getAllPreprocessorDefs() const; // includes inherited definitions
 
-        Value getHeaderSearchPathValue()                    { return getValue (Ids::headerPath); }
-        String getHeaderSearchPathString() const            { return config [Ids::headerPath]; }
+        Value getConfigHeaderSearchPathValue()              { return getValue (Ids::headerPath); }
+        String getConfigHeaderSearchPathString() const      { return config [Ids::headerPath]; }
+        StringArray getHeaderSearchPaths(String& paths_string) const;
         StringArray getHeaderSearchPaths() const;
 
-        Value getLibrarySearchPathValue()                   { return getValue (Ids::libraryPath); }
-        String getLibrarySearchPathString() const           { return config [Ids::libraryPath]; }
+        Value getExtraCompilerFlags()                       { return getValue (Ids::extraCompilerFlags); }
+        String getExtraCompilerFlagsString() const          { return config [Ids::extraCompilerFlags].toString().replaceCharacters ("\r\n", "  "); }
+
+        Value getConfigLibrarySearchPathValue()             { return getValue (Ids::libraryPath); }
+        String getConfigLibrarySearchPathString() const     { return config [Ids::libraryPath]; }
+        StringArray getLibrarySearchPaths(String& paths_string) const;
+        String getGCCLibraryPathFlags(String paths_string) const;
         StringArray getLibrarySearchPaths() const;
         String getGCCLibraryPathFlags() const;
+
+        Value getExtraLinkerFlags()                         { return getValue (Ids::extraLinkerFlags); }
+        String getExtraLinkerFlagsString() const            { return config [Ids::extraLinkerFlags].toString().replaceCharacters ("\r\n", "  "); }
+
+        Value getExternalLibraries()                        { return getValue (Ids::externalLibraries); }
+        String getExternalLibrariesString() const           { return config [Ids::externalLibraries].toString().replaceCharacters ("\r\n", " ;"); }
+
+        Value getInstallRecipe()                            { return getValue (Ids::InstallRecipe); }
+
+        Value getUninstallRecipe()                          { return getValue (Ids::UninstallRecipe); }
 
         Value getUserNotes()                                { return getValue (Ids::userNotes); }
 

@@ -220,6 +220,8 @@ void ProjectExporter::createPropertyEditors (PropertyListBuilder& props)
                "Extra preprocessor definitions. Use the form \"NAME1=value NAME2=value\", using whitespace, commas, "
                "or new-lines to separate the items - to include a space or comma in a definition, precede it with a backslash.");
 
+//     props.addSearchPathProperty (getHeaderSearchPathValue(), "Extra Header Search Paths", "Extra header search paths.");
+
     props.add (new TextPropertyComponent (getExtraCompilerFlags(), "Extra compiler flags", 8192, true),
                "Extra command-line flags to be passed to the compiler. This string can contain references to preprocessor definitions in the "
                "form ${NAME_OF_DEFINITION}, which will be replaced with their values.");
@@ -228,6 +230,8 @@ void ProjectExporter::createPropertyEditors (PropertyListBuilder& props)
                "Extra command-line flags to be passed to the linker. You might want to use this for adding additional libraries. "
                "This string can contain references to preprocessor definitions in the form ${NAME_OF_VALUE}, which will be replaced with their values.");
 
+//     props.addSearchPathProperty (getLibrarySearchPathValue(), "Extra Library Search Paths", "Extra library search paths.");
+
     props.add (new TextPropertyComponent (getExternalLibraries(), "External libraries to link", 8192, true),
                "Additional libraries to link (one per line). You should not add any platform specific decoration to these names. "
                "This string can contain references to preprocessor definitions in the form ${NAME_OF_VALUE}, which will be replaced with their values.");
@@ -235,6 +239,12 @@ void ProjectExporter::createPropertyEditors (PropertyListBuilder& props)
     createIconProperties (props);
 
     createExporterProperties (props);
+
+    props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
+              "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
+
+    props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
+              "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
 
     props.add (new TextPropertyComponent (getUserNotes(), "Notes", 32768, true),
                "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
@@ -285,15 +295,6 @@ void ProjectExporter::createIconProperties (PropertyListBuilder& props)
 
     props.add (new ChoicePropertyComponent (getBigIconImageItemID(), "Icon (large)", choices, ids),
                "Sets an icon to use for the executable.");
-
-    props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
-              "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
-
-    props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
-              "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
-
-    props.add (new TextPropertyComponent (getUserNotes(), "Notes", 32768, true),
-               "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
 }
 
 //==============================================================================
@@ -793,14 +794,33 @@ void ProjectExporter::BuildConfiguration::createPropertyEditors (PropertyListBui
                "The folder in which the finished binary should be placed. Leave this blank to cause the binary to be placed "
                "in its default location in the build folder.");
 
-    props.addSearchPathProperty (getHeaderSearchPathValue(), "Header search paths", "Extra header search paths.");
-    props.addSearchPathProperty (getLibrarySearchPathValue(), "Extra library search paths", "Extra library search paths.");
-
     props.add (new TextPropertyComponent (getBuildConfigPreprocessorDefs(), "Preprocessor definitions", 32768, true),
                "Extra preprocessor definitions. Use the form \"NAME1=value NAME2=value\", using whitespace, commas, or "
                "new-lines to separate the items - to include a space or comma in a definition, precede it with a backslash.");
 
+    props.addSearchPathProperty (getHeaderSearchPathValue(), "Header search paths", "Extra header search paths.");
+
+    props.add (new TextPropertyComponent (getExtraCompilerFlags(), "Extra Compiler Flags", 8192, true),
+               "Extra command-line flags to be passed to the compiler. This string can contain references to preprocessor definitions in the "
+               "form ${NAME_OF_DEFINITION}, which will be replaced with their values.");
+
+    props.addSearchPathProperty (getLibrarySearchPathValue(), "Extra library search paths", "Extra library search paths.");
+
     createConfigProperties (props);
+
+    props.add (new TextPropertyComponent (getExtraLinkerFlags(), "Extra Linker Flags", 8192, true),
+               "Extra command-line flags to be passed to the linker. You might want to use this for adding additional libraries. "
+               "This string can contain references to preprocessor definitions in the form ${NAME_OF_VALUE}, which will be replaced with their values.");
+
+    props.add (new TextPropertyComponent (getExternalLibraries(), "External Libraries", 8192, true),
+               "Additional libraries to link (one per line). You should not add any platform specific decoration to these names. "
+               "This string can contain references to preprocessor definitions in the form ${NAME_OF_VALUE}, which will be replaced with their values.");
+
+    props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
+              "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
+
+    props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
+              "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
 
     props.add (new TextPropertyComponent (getUserNotes(), "Notes", 32768, true),
                "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
@@ -812,25 +832,40 @@ StringPairArray ProjectExporter::BuildConfiguration::getAllPreprocessorDefs() co
                                   parsePreprocessorDefs (getBuildConfigPreprocessorDefsString()));
 }
 
+StringArray ProjectExporter::BuildConfiguration::getHeaderSearchPaths(String& paths_string) const
+{
+    return getSearchPathsFromString(paths_string) ;
+}
+
+StringArray ProjectExporter::BuildConfiguration::getLibrarySearchPaths(String& paths_string) const
+{
+    return getSearchPathsFromString(paths_string) ;
+}
+
 StringArray ProjectExporter::BuildConfiguration::getHeaderSearchPaths() const
 {
-    return getSearchPathsFromString (getHeaderSearchPathString());
+    return getSearchPathsFromString(getConfigHeaderSearchPathString()) ;
 }
 
 StringArray ProjectExporter::BuildConfiguration::getLibrarySearchPaths() const
 {
-    return getSearchPathsFromString (getLibrarySearchPathString());
+    return getSearchPathsFromString(getConfigLibrarySearchPathString()) ;
 }
 
-String ProjectExporter::BuildConfiguration::getGCCLibraryPathFlags() const
+String ProjectExporter::BuildConfiguration::getGCCLibraryPathFlags(String paths_string) const
 {
     String s;
-    const StringArray libraryPaths (getLibrarySearchPaths());
+    const StringArray libraryPaths(getLibrarySearchPaths(paths_string)) ;
 
     for (int i = 0; i < libraryPaths.size(); ++i)
         s << " -L" << escapeSpaces (libraryPaths[i]).replace ("~", "$(HOME)");
 
     return s;
+}
+
+String ProjectExporter::BuildConfiguration::getGCCLibraryPathFlags() const
+{
+  return getGCCLibraryPathFlags(getConfigLibrarySearchPathString()) ;
 }
 
 String ProjectExporter::getExternalLibraryFlags (const BuildConfiguration& config) const
