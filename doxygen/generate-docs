@@ -5,4 +5,5 @@
 
 doxygen
 
-cp search.css doc/search/search.css
+cp search.css    doc/search/
+cp img/nav_f.png doc/

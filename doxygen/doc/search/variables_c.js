@@ -27,6 +27,7 @@ var searchData=
   ['message',['message',['../classMidiMessageSequence_1_1MidiEventHolder.html#a4d9cf307bd15a6abb4e98cfe03f8f580',1,'MidiMessageSequence::MidiEventHolder::message()'],['../classOnlineUnlockForm.html#a0e618e93104800988c1fab673b4836d8',1,'OnlineUnlockForm::message()']]],
   ['messages',['messages',['../structUnitTestRunner_1_1TestResult.html#ae94f7a271e7f4a5725939036156595bb',1,'UnitTestRunner::TestResult']]],
   ['metadatavalues',['metadataValues',['../classAudioFormatReader.html#a8dfe48ed0e171928185c716811f5ecdb',1,'AudioFormatReader']]],
+  ['midichannel',['midiChannel',['../structMPENote.html#a642fb34a5721d3eb5d3cf84e92706164',1,'MPENote']]],
   ['midichannelindex',['midiChannelIndex',['../classAudioProcessorGraph.html#acde235cdad97d2bba6dd828ceeb7c4e9',1,'AudioProcessorGraph']]],
   ['mididatabase64',['midiDataBase64',['../classCoreAudioFormat.html#a6a78852cc234c7fc83ab18c92662feb6',1,'CoreAudioFormat']]],
   ['midnightblue',['midnightblue',['../classColours.html#ae2b84b4de769da6c75cc947dcf8a066a',1,'Colours']]],

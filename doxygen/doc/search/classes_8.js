@@ -19,14 +19,16 @@ var searchData=
   ['inputfilter',['InputFilter',['../classTextEditor_1_1InputFilter.html',1,'TextEditor']]],
   ['inputsource',['InputSource',['../classInputSource.html',1,'']]],
   ['inputstream',['InputStream',['../classInputStream.html',1,'']]],
+  ['instantiationcompletioncallback',['InstantiationCompletionCallback',['../structAudioPluginFormat_1_1InstantiationCompletionCallback.html',1,'AudioPluginFormat']]],
   ['interprocessconnection',['InterprocessConnection',['../classInterprocessConnection.html',1,'']]],
   ['interprocessconnectionserver',['InterprocessConnectionServer',['../classInterprocessConnectionServer.html',1,'']]],
   ['interprocesslock',['InterProcessLock',['../classInterProcessLock.html',1,'']]],
   ['invocationinfo',['InvocationInfo',['../structApplicationCommandTarget_1_1InvocationInfo.html',1,'ApplicationCommandTarget']]],
   ['ipaddress',['IPAddress',['../classIPAddress.html',1,'']]],
-  ['iterator',['Iterator',['../classPath_1_1Iterator.html',1,'Path']]],
-  ['iterator',['Iterator',['../classListenerList_1_1Iterator.html',1,'ListenerList']]],
-  ['iterator',['Iterator',['../classHashMap_1_1Iterator.html',1,'HashMap']]],
+  ['item',['Item',['../structPopupMenu_1_1Item.html',1,'PopupMenu']]],
+  ['iterator',['Iterator',['../classMidiBuffer_1_1Iterator.html',1,'MidiBuffer']]],
   ['iterator',['Iterator',['../classCodeDocument_1_1Iterator.html',1,'CodeDocument']]],
-  ['iterator',['Iterator',['../classMidiBuffer_1_1Iterator.html',1,'MidiBuffer']]]
+  ['iterator',['Iterator',['../classHashMap_1_1Iterator.html',1,'HashMap']]],
+  ['iterator',['Iterator',['../classListenerList_1_1Iterator.html',1,'ListenerList']]],
+  ['iterator',['Iterator',['../classPath_1_1Iterator.html',1,'Path']]]
 ];

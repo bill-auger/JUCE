@@ -3,7 +3,7 @@ var searchData=
   ['r',['r',['../structFFT_1_1Complex.html#aacf60a9d5fb15df15ba49171e337bf90',1,'FFT::Complex']]],
   ['radial',['radial',['../classDrawableShape_1_1FillAndStrokeState.html#a35b2d94ae6a13721f581b582400007bb',1,'DrawableShape::FillAndStrokeState']]],
   ['radius',['radius',['../structDropShadow.html#a96cbbc37579f9a2627f342a7dc6be568',1,'DropShadow']]],
-  ['range',['range',['../classAudioParameterFloat.html#a7e860466dbc1319bc064cd6e7db382e3',1,'AudioParameterFloat::range()'],['../classAttributedString_1_1Attribute.html#aadd39f43e26b6c0a36dca6bf36537818',1,'AttributedString::Attribute::range()']]],
+  ['range',['range',['../classAudioParameterFloat.html#a7e860466dbc1319bc064cd6e7db382e3',1,'AudioParameterFloat::range()'],['../classAttributedString_1_1Attribute.html#ab35a1ef10e233d3d0125b01baf4e086e',1,'AttributedString::Attribute::range()']]],
   ['red',['red',['../classColours.html#a5056e7857f2bc211569dfc89512244dd',1,'Colours']]],
   ['redbits',['redBits',['../classOpenGLPixelFormat.html#ae35395197ac66ebfed1a94d1748a20b8',1,'OpenGLPixelFormat']]],
   ['registerbutton',['registerButton',['../classOnlineUnlockForm.html#a2a7d3a1f454b97beebf84bc5ffd23939',1,'OnlineUnlockForm']]],

@@ -8,6 +8,7 @@ var searchData=
   ['palevioletred',['palevioletred',['../classColours.html#aff1ccf8323d8231e42e1342a7d7b293a',1,'Colours']]],
   ['papayawhip',['papayawhip',['../classColours.html#a8b6fb5bd196ba71f78c2d0a17c712783',1,'Colours']]],
   ['parameterindex',['parameterIndex',['../structAudioProcessorEditor_1_1ParameterControlHighlightInfo.html#adf1655668910dd66ab04d8c2bafeb4c0',1,'AudioProcessorEditor::ParameterControlHighlightInfo']]],
+  ['parameternumber',['parameterNumber',['../structMidiRPNMessage.html#adca04bc6a3cdbd8bd2fb70a15d8530ba',1,'MidiRPNMessage']]],
   ['paramid',['paramID',['../classAudioProcessorParameterWithID.html#a09fd779999685889367257e36ff648da',1,'AudioProcessorParameterWithID']]],
   ['parent',['parent',['../structRelativeCoordinate_1_1Strings.html#a590be4a90e9e7b7ffd12b4ff5f7c667d',1,'RelativeCoordinate::Strings']]],
   ['part1',['part1',['../classRSAKey.html#af9992df31573da04eff2f95b6c215be1',1,'RSAKey']]],
@@ -18,6 +19,7 @@ var searchData=
   ['peachpuff',['peachpuff',['../classColours.html#aa83a3ec486288727ffa82d9e8e4a82b0',1,'Colours']]],
   ['peru',['peru',['../classColours.html#a8417b7053caaf567a98eb61eccf57838',1,'Colours']]],
   ['pink',['pink',['../classColours.html#aa959194b957e4113dcdc9ec488464229',1,'Colours']]],
+  ['pitchbend',['pitchbend',['../structMPENote.html#aebfdbfc173bc19cc97b97659c412078f',1,'MPENote']]],
   ['pixelformat',['pixelFormat',['../classImage_1_1BitmapData.html#aae26ad39defa124117e3a7d8da499e6b',1,'Image::BitmapData::pixelFormat()'],['../classImagePixelData.html#a7af8920b587eebc3d94a0883375ca08f',1,'ImagePixelData::pixelFormat()']]],
   ['pixelstride',['pixelStride',['../classImage_1_1BitmapData.html#a7fc1d9da2a609dd67e8e9ad70e5f38f0',1,'Image::BitmapData']]],
   ['player',['player',['../classStandalonePluginHolder.html#a7dd25ebd12047b7c040f4128f4690c52',1,'StandalonePluginHolder']]],
@@ -38,9 +40,9 @@ var searchData=
   ['ppqposition',['ppqPosition',['../structAudioPlayHead_1_1CurrentPositionInfo.html#aae819730a8f2918f97b9869970ff8c3d',1,'AudioPlayHead::CurrentPositionInfo']]],
   ['ppqpositionoflastbarstart',['ppqPositionOfLastBarStart',['../structAudioPlayHead_1_1CurrentPositionInfo.html#ad7967e1315115628cb35f93f389a3448',1,'AudioPlayHead::CurrentPositionInfo']]],
   ['preferredheight',['preferredHeight',['../classPropertyComponent.html#ae912e7f6c12e76cf3dc2a9f0d210e4ed',1,'PropertyComponent']]],
-  ['pressure',['pressure',['../classMouseEvent.html#a88b142ee1a340d8ad5f092b083ddbcf7',1,'MouseEvent']]],
+  ['pressure',['pressure',['../structMPENote.html#af04939884198c48da9927e76e4f3ff90',1,'MPENote::pressure()'],['../classMouseEvent.html#a88b142ee1a340d8ad5f092b083ddbcf7',1,'MouseEvent::pressure()']]],
   ['processlock',['processLock',['../classIIRFilter.html#ab20e1698e56ae7426fcbd1f22157a695',1,'IIRFilter::processLock()'],['../structPropertiesFile_1_1Options.html#a65881e8a7c6e90fbaca03dd2f00a34a7',1,'PropertiesFile::Options::processLock()']]],
-  ['processor',['processor',['../classStandalonePluginHolder.html#aa971bb76e4bc1cb996c8d300f9947434',1,'StandalonePluginHolder::processor()'],['../classAudioProcessorEditor.html#a96811cb3a8371de07b685fa10cf2d48e',1,'AudioProcessorEditor::processor()'],['../classAudioProcessorValueTreeState.html#aa50efe71cc5b2c9bf0b5c661d0b36c54',1,'AudioProcessorValueTreeState::processor()']]],
+  ['processor',['processor',['../classStandalonePluginHolder.html#aa971bb76e4bc1cb996c8d300f9947434',1,'StandalonePluginHolder::processor()'],['../structPluginBusUtilities.html#a64b55b3c78a1c858404dd379230edad4',1,'PluginBusUtilities::processor()'],['../classAudioProcessorEditor.html#a96811cb3a8371de07b685fa10cf2d48e',1,'AudioProcessorEditor::processor()'],['../classAudioProcessorValueTreeState.html#aa50efe71cc5b2c9bf0b5c661d0b36c54',1,'AudioProcessorValueTreeState::processor()']]],
   ['properties',['properties',['../classAudioProcessorGraph_1_1Node.html#afc706ebfb3beddad1c5bc16bc7fa2a2e',1,'AudioProcessorGraph::Node']]],
   ['purple',['purple',['../classColours.html#ae3a4c80eb100c23650cec3d19320b40b',1,'Colours']]]
 ];

@@ -1,6 +1,10 @@
 var searchData=
 [
+  ['kaudiounitproperty_5fsupportsmpe',['kAudioUnitProperty_SupportsMPE',['../juce__AudioUnitPluginFormat_8h.html#a726ca809ffd3d67ab4b8476646f26635a3d9d3125ae195114257428b622aebb52',1,'juce_AudioUnitPluginFormat.h']]],
+  ['kdefaultmaxchannels',['kDefaultMaxChannels',['../structPluginBusUtilities.html#a251e75b777d5473a8d2c2d22c245e0b0a0bab618bee103356ecf64ae52d6799ab',1,'PluginBusUtilities']]],
   ['keyboardfocustraverser',['KeyboardFocusTraverser',['../classKeyboardFocusTraverser.html',1,'KeyboardFocusTraverser'],['../classKeyboardFocusTraverser.html#a275c834346e37c782d74f08365f1a06f',1,'KeyboardFocusTraverser::KeyboardFocusTraverser()']]],
+  ['keydown',['keyDown',['../structMPENote.html#a20106ff137c1a5f0b8e6e099ff3fc922a895ffc865cb90899c347efefb881e2ce',1,'MPENote']]],
+  ['keydownandsustained',['keyDownAndSustained',['../structMPENote.html#a20106ff137c1a5f0b8e6e099ff3fc922a31c427116ac75e042f9f5315a7aad129',1,'MPENote']]],
   ['keydownoverlaycolourid',['keyDownOverlayColourId',['../classMidiKeyboardComponent.html#a75cb05395efc61c447dc93e8873ab05eaca2ce853f7e9341311ff237d17f5485f',1,'MidiKeyboardComponent']]],
   ['keyexists',['keyExists',['../classWindowsRegistry.html#a0d58ee97b4dfd8fab8e1d8949d308fe0',1,'WindowsRegistry']]],
   ['keygeneration',['KeyGeneration',['../classKeyGeneration.html',1,'']]],
@@ -14,6 +18,7 @@ var searchData=
   ['keyseparatorlinecolourid',['keySeparatorLineColourId',['../classMidiKeyboardComponent.html#a75cb05395efc61c447dc93e8873ab05ea945be9fe34d15aea642b2ab53e2ac30e',1,'MidiKeyboardComponent']]],
   ['keysig',['keySig',['../classCoreAudioFormat.html#a523344d08328d28bc32436f1ad472013',1,'CoreAudioFormat']]],
   ['keysignaturemetaevent',['keySignatureMetaEvent',['../classMidiMessage.html#af293098dc762316469a0bb1edfa4f53c',1,'MidiMessage']]],
+  ['keystate',['KeyState',['../structMPENote.html#a20106ff137c1a5f0b8e6e099ff3fc922',1,'MPENote::KeyState()'],['../structMPENote.html#a971b45daba4a89318713bcb4678dbc4b',1,'MPENote::keyState()']]],
   ['keystatechanged',['keyStateChanged',['../classMidiKeyboardComponent.html#a6dd0d6d6b7a12124c1b9cd5d6b64c198',1,'MidiKeyboardComponent::keyStateChanged()'],['../classKeyPressMappingSet.html#a0329856dd3e6ec50d64114f197045491',1,'KeyPressMappingSet::keyStateChanged()'],['../classComponent.html#aeff4d2fdbae4d5974e43b62ab3c304f9',1,'Component::keyStateChanged()'],['../classKeyListener.html#aa3efa1c9c4ebfb754c9d68180a40b6c7',1,'KeyListener::keyStateChanged()'],['../classComboBox.html#a35cf3423079da7b0605956fb9ec39174',1,'ComboBox::keyStateChanged()'],['../classListBox.html#a84e49fbbf1ddf3af400f06e741ee0910',1,'ListBox::keyStateChanged()'],['../classTextEditor.html#a616706ad06c8a6a1c00f62a4c6e0d448',1,'TextEditor::keyStateChanged()']]],
   ['khaki',['khaki',['../classColours.html#a3dbd6496fffe6448949acef248ddb3f6',1,'Colours']]],
   ['kill',['kill',['../classChildProcess.html#a524fd75e18a0aa94a8518ce49432413c',1,'ChildProcess']]],

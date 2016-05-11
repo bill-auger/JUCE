@@ -6,7 +6,7 @@ var searchData=
   ['canselectfiles',['canSelectFiles',['../classFileBrowserComponent.html#a32888a950cc0e51c8e1350f53bea43d6a07878819a9559235bff2789c1fdbd8e9',1,'FileBrowserComponent']]],
   ['canselectmultipleitems',['canSelectMultipleItems',['../classFileBrowserComponent.html#a32888a950cc0e51c8e1350f53bea43d6a0eacc483cb1561acdce859beed28364f',1,'FileBrowserComponent']]],
   ['caretcolourid',['caretColourId',['../classCaretComponent.html#aee2f8dbdf274b7691a1fe3b704831f81a17c813c8e63c43ff1339f864387a007e',1,'CaretComponent']]],
-  ['centre',['centre',['../classResizableBorderComponent_1_1Zone.html#ad6fba9e9d2be9a3c7e31f14ba8f6881eabb95f72d0c8f0a7f1067d10eabd9dcf7',1,'ResizableBorderComponent::Zone']]],
+  ['centre',['centre',['../classAudioChannelSet.html#ab917e490df2e0edfb1087e4c4f8d652eae69498dc5874ee9f9d67d0479225d701',1,'AudioChannelSet::centre()'],['../classResizableBorderComponent_1_1Zone.html#ad6fba9e9d2be9a3c7e31f14ba8f6881eabb95f72d0c8f0a7f1067d10eabd9dcf7',1,'ResizableBorderComponent::Zone::centre()']]],
   ['centred',['centred',['../classJustification.html#a1f8c07756c56fe8f31ed44964e51bfbcaf9d9adde20dce1aa38ff9a69be2b4384',1,'Justification::centred()'],['../classRectanglePlacement.html#afd5464553fd6bb41d697f3fc1d7427edadf52ee04f4f43cfcc6049d49833dd946',1,'RectanglePlacement::centred()']]],
   ['centredbottom',['centredBottom',['../classJustification.html#a1f8c07756c56fe8f31ed44964e51bfbca392a10b2805345384ac0589b1261cea9',1,'Justification']]],
   ['centredleft',['centredLeft',['../classJustification.html#a1f8c07756c56fe8f31ed44964e51bfbca66eba21caedb3d6bfbeff74c610628b4',1,'Justification']]],
@@ -23,7 +23,7 @@ var searchData=
   ['connectedonright',['ConnectedOnRight',['../classButton.html#aebb14d53173b13f0e98d01a02aee8e82aaeedde6687fd468865bfa2e8a1deee68',1,'Button']]],
   ['connectedontop',['ConnectedOnTop',['../classButton.html#aebb14d53173b13f0e98d01a02aee8e82a856730f0a48a5b785df067d42110d009',1,'Button']]],
   ['constanttype',['constantType',['../classExpression.html#aa416ac50fdbe8bdea9c59f5c78f0c85ba4c05ef0368ceb383ecdd4933ddb3b5db',1,'Expression']]],
-  ['copy',['copy',['../namespaceStandardApplicationCommandIDs.html#a8ce34a13722727706c8e98c64454fbf9a3584c202667823072c928fd699725466',1,'StandardApplicationCommandIDs']]],
+  ['copy',['copy',['../namespaceStandardApplicationCommandIDs.html#a043129ed1980b49afa5066d7d36d7bd8a3584c202667823072c928fd699725466',1,'StandardApplicationCommandIDs']]],
   ['copyingcursor',['CopyingCursor',['../classMouseCursor.html#a5de22a8c3eb06827ac11352e76eb9a97abe0154531e3b7b07ea1241be32850c3c',1,'MouseCursor']]],
   ['crosshaircursor',['CrosshairCursor',['../classMouseCursor.html#a5de22a8c3eb06827ac11352e76eb9a97add4ed956814986c922cdeae70fdad9d3',1,'MouseCursor']]],
   ['ctrlaltcommandmodifiers',['ctrlAltCommandModifiers',['../classModifierKeys.html#acdd2a85defa6a705d74e1a63d193678ba2647f9ed4b2db164973d8b735f3b216a',1,'ModifierKeys']]],
@@ -33,5 +33,5 @@ var searchData=
   ['currentapplicationfile',['currentApplicationFile',['../classFile.html#a3e19cafabb03c5838160263a6e76313da8292b316ce9eb8ebc0d0980b788a877c',1,'File']]],
   ['currentexecutablefile',['currentExecutableFile',['../classFile.html#a3e19cafabb03c5838160263a6e76313dab960741272c75e94482f295a516aae62',1,'File']]],
   ['curved',['curved',['../classPathStrokeType.html#af1cf21018ccb9aa84572c1da4ae513b8aa0e50e387cbe6533b830061006cb3747',1,'PathStrokeType']]],
-  ['cut',['cut',['../namespaceStandardApplicationCommandIDs.html#a8ce34a13722727706c8e98c64454fbf9ac0037bfec469a888d3a7ab1c0c222765',1,'StandardApplicationCommandIDs']]]
+  ['cut',['cut',['../namespaceStandardApplicationCommandIDs.html#a043129ed1980b49afa5066d7d36d7bd8ac0037bfec469a888d3a7ab1c0c222765',1,'StandardApplicationCommandIDs']]]
 ];

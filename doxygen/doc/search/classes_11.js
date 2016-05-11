@@ -24,6 +24,7 @@ var searchData=
   ['referencecountedobjectptr_3c_20asyncupdatermessage_20_3e',['ReferenceCountedObjectPtr&lt; AsyncUpdaterMessage &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
   ['referencecountedobjectptr_3c_20blockingmessage_20_3e',['ReferenceCountedObjectPtr&lt; BlockingMessage &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
   ['referencecountedobjectptr_3c_20imagepixeldata_20_3e',['ReferenceCountedObjectPtr&lt; ImagePixelData &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
+  ['referencecountedobjectptr_3c_20popupmenu_3a_3acustomcomponent_20_3e',['ReferenceCountedObjectPtr&lt; PopupMenu::CustomComponent &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
   ['referencecountedobjectptr_3c_20referencecountedobject_20_3e',['ReferenceCountedObjectPtr&lt; ReferenceCountedObject &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
   ['referencecountedobjectptr_3c_20rootobject_20_3e',['ReferenceCountedObjectPtr&lt; RootObject &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
   ['referencecountedobjectptr_3c_20sharedfontinternal_20_3e',['ReferenceCountedObjectPtr&lt; SharedFontInternal &gt;',['../classReferenceCountedObjectPtr.html',1,'']]],
@@ -48,6 +49,8 @@ var searchData=
   ['result',['Result',['../classResult.html',1,'']]],
   ['reverb',['Reverb',['../classReverb.html',1,'']]],
   ['reverbaudiosource',['ReverbAudioSource',['../classReverbAudioSource.html',1,'']]],
+  ['rotaryparameters',['RotaryParameters',['../structSlider_1_1RotaryParameters.html',1,'Slider']]],
   ['rsakey',['RSAKey',['../classRSAKey.html',1,'']]],
-  ['run',['Run',['../classTextLayout_1_1Run.html',1,'TextLayout']]]
+  ['run',['Run',['../classTextLayout_1_1Run.html',1,'TextLayout']]],
+  ['runtimepermissions',['RuntimePermissions',['../classRuntimePermissions.html',1,'']]]
 ];

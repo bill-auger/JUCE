@@ -3,7 +3,7 @@ var searchData=
   ['samplesperframe',['samplesPerFrame',['../classAudioCDReader.html#a7be91730c3919f91a8ffce774120bf8ba1db74900d5d80b397c1bbf11691cee93',1,'AudioCDReader']]],
   ['savedok',['savedOk',['../classFileBasedDocument.html#a89d417326aed46fb561c599265e426d2aa0f8eec65cc59595a5e7d665c2a2efeb',1,'FileBasedDocument']]],
   ['savemode',['saveMode',['../classFileBrowserComponent.html#a32888a950cc0e51c8e1350f53bea43d6aca3d0a66bd4fc606ab874b3da93a4d89',1,'FileBrowserComponent']]],
-  ['selectall',['selectAll',['../namespaceStandardApplicationCommandIDs.html#a8ce34a13722727706c8e98c64454fbf9a651985a70b21b1d0b7a89007fc8793df',1,'StandardApplicationCommandIDs']]],
+  ['selectall',['selectAll',['../namespaceStandardApplicationCommandIDs.html#a043129ed1980b49afa5066d7d36d7bd8a651985a70b21b1d0b7a89007fc8793df',1,'StandardApplicationCommandIDs']]],
   ['selecteditembackgroundcolourid',['selectedItemBackgroundColourId',['../classTreeView.html#abeebe6dbdc6ae466495aabc64eb51d6aa70c4477c7945a15d0fc8e5c5f75cdb71',1,'TreeView']]],
   ['sendnotification',['sendNotification',['../juce__NotificationType_8h.html#a25a31a4bdc02a0d0adb743e26dd14ba9ad9a3eff1d1ddebf33141da7cf581be4c',1,'juce_NotificationType.h']]],
   ['sendnotificationasync',['sendNotificationAsync',['../juce__NotificationType_8h.html#a25a31a4bdc02a0d0adb743e26dd14ba9aa70e4499b93d1738b0ee53de03f7a9c4',1,'juce_NotificationType.h']]],
@@ -54,6 +54,10 @@ var searchData=
   ['storeasxml',['storeAsXML',['../classPropertiesFile.html#ac4d1ac9a6b624f7e0de7787de46dc05eab0145370e12c4174bd36dc6ac6ccc147',1,'PropertiesFile']]],
   ['stretchtofit',['stretchToFit',['../classRectanglePlacement.html#afd5464553fd6bb41d697f3fc1d7427eda592b34ff9ad1d85db16f2e02c6252b8b',1,'RectanglePlacement']]],
   ['studioone',['StudioOne',['../classPluginHostType.html#a69d9330e82ef7520f9aa8b2ad78ce5a8abd93d9b41b6e92a2fac2dc3a0800c150',1,'PluginHostType']]],
+  ['subbass',['subbass',['../classAudioChannelSet.html#ab917e490df2e0edfb1087e4c4f8d652eaf93defd949e413814b6fa16c93d21837',1,'AudioChannelSet']]],
+  ['subbass2',['subbass2',['../classAudioChannelSet.html#ab917e490df2e0edfb1087e4c4f8d652ea1b71d1f467fc50862b7b815e698c5f26',1,'AudioChannelSet']]],
+  ['surround',['surround',['../classAudioChannelSet.html#ab917e490df2e0edfb1087e4c4f8d652ead7addeac6edf5a12148fabfd13a09100',1,'AudioChannelSet']]],
+  ['sustained',['sustained',['../structMPENote.html#a20106ff137c1a5f0b8e6e099ff3fc922a3394b891d4bdd77fd39d141102c4a4bd',1,'MPENote']]],
   ['switched',['switched',['../classAppleRemoteDevice.html#a63ccce128a48e63972e2d71a8de5f8d0ae278b856f84c176f8a1628c118e902fc',1,'AppleRemoteDevice']]],
   ['symboltype',['symbolType',['../classExpression.html#aa416ac50fdbe8bdea9c59f5c78f0c85baef74a77024f2e22f163d3b2346b99162',1,'Expression']]]
 ];

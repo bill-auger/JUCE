@@ -37,7 +37,7 @@ var searchData=
   ['floralwhite',['floralwhite',['../classColours.html#a7b14b831624be80b4520225559ba5253',1,'Colours']]],
   ['folder',['folder',['../structKnownPluginList_1_1PluginTree.html#ac9560e7c8295f7967b7a4f1b62a30d1b',1,'KnownPluginList::PluginTree']]],
   ['foldername',['folderName',['../structPropertiesFile_1_1Options.html#ad5db314e117ec06d23b08aca130500cd',1,'PropertiesFile::Options']]],
-  ['font',['font',['../structLowLevelGraphicsPostScriptRenderer_1_1SavedState.html#a350201db969d79ab1783c0bde1030469',1,'LowLevelGraphicsPostScriptRenderer::SavedState::font()'],['../classTextLayout_1_1Run.html#a692e70e5e5ce8d78be5ecfe3c8591d17',1,'TextLayout::Run::font()'],['../classDrawableText_1_1ValueTreeWrapper.html#a58fc597095c77686d5eb2d97e539e64f',1,'DrawableText::ValueTreeWrapper::font()']]],
+  ['font',['font',['../structLowLevelGraphicsPostScriptRenderer_1_1SavedState.html#a350201db969d79ab1783c0bde1030469',1,'LowLevelGraphicsPostScriptRenderer::SavedState::font()'],['../classAttributedString_1_1Attribute.html#a8b15853437c7e58f98cee0f44f2df31f',1,'AttributedString::Attribute::font()'],['../classTextLayout_1_1Run.html#a692e70e5e5ce8d78be5ecfe3c8591d17',1,'TextLayout::Run::font()'],['../classDrawableText_1_1ValueTreeWrapper.html#a58fc597095c77686d5eb2d97e539e64f',1,'DrawableText::ValueTreeWrapper::font()']]],
   ['fontheight',['fontHeight',['../classDrawableText_1_1ValueTreeWrapper.html#a2b1cf90acc44a5ca2b9a7717962b44de',1,'DrawableText::ValueTreeWrapper']]],
   ['fonthscale',['fontHScale',['../classDrawableText_1_1ValueTreeWrapper.html#ac0a4ff12678830dd3a2cd0d1bd3c6e2d',1,'DrawableText::ValueTreeWrapper']]],
   ['forestgreen',['forestgreen',['../classColours.html#a34c336f65b06cb988f89bddc14a5041e',1,'Colours']]],

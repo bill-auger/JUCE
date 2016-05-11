@@ -100,8 +100,8 @@
     display: none;
     position: absolute;
     left: 0; top: 0;
-    border: 1px solid #90A5CE;
-    background-color: #F9FAFC;
+    border: 1px solid #7A5C2C;
+    background-color: #F8F4ED;
     z-index: 1;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -145,7 +145,7 @@ a.SelectItem:active {
 
 a.SelectItem:hover {
     color: #FFFFFF;
-    background-color: #3D578C;
+    background-color: #171108;
     outline-style: none;
     text-decoration: none;
     cursor: pointer;
@@ -164,7 +164,7 @@ iframe#MSearchResults {
     position: absolute;
     left: 0; top: 0;
     border: 1px solid #000;
-    background-color: #EEF1F7;
+    background-color: #ECE0CC;
 }
 
 /* ----------------------------------- */
@@ -199,7 +199,7 @@ body.SRPage {
 
 .SRSymbol {
     font-weight: bold;
-    color: #425E97;
+    color: #1D160A;
     font-family: Arial, Verdana, sans-serif;
     text-decoration: none;
     outline: none;
@@ -207,7 +207,7 @@ body.SRPage {
 
 a.SRScope {
     display: block;
-    color: #425E97;
+    color: #1D160A;
     font-family: Arial, Verdana, sans-serif;
     text-decoration: none;
     outline: none;
@@ -240,7 +240,7 @@ DIV.searchresults {
 /*---------------- External search page results */
 
 .searchresult {
-    background-color: #F0F3F8;
+    background-color: #EFE4D2;
 }
 
 .pages b {
@@ -270,10 +270,12 @@ DIV.searchresults {
 }
 
 /* my tweaks */
-#MSearchBox, #MSearchSelectWindow, a.SelectItem:hover,
-#MSearchResultsWindow, .searchresult, #MSearchResults
-#MSearchResults .SRStatus, .SRSymbol, a.SRScope
+#MSearchBox , #MSearchSelectWindow , a.SelectItem:hover ,
+#MSearchResultsWindow , .searchresult , #MSearchResults ,
+#MSearchResults , .SRStatus , .SRSymbol , a.SRScope
 { background-color: #000 ; color: #d80 ; }
 
-.MSearchBoxActive #MSearchField
-{ color: #fff ; }
+#MSearchBox span { -webkit-filter: invert(1) ; filter: invert(1) ;
+                   filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1') ; }
+
+#SRResults                      { color: #38F ; }

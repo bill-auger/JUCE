@@ -34,6 +34,8 @@ var searchData=
   ['arguments',['arguments',['../structvar_1_1NativeFunctionArgs.html#a6c898b57ab92fb3084a78a4713ae2065',1,'var::NativeFunctionArgs']]],
   ['ascent',['ascent',['../classCustomTypeface.html#ab5c74224ec102b6990481b658d189ac4',1,'CustomTypeface::ascent()'],['../classTextLayout_1_1Line.html#ac356b4c8bd159161ac80438457471d7d',1,'TextLayout::Line::ascent()']]],
   ['attributeid',['attributeID',['../structOpenGLShaderProgram_1_1Attribute.html#a57907b3f4e21a42bae5d483b16b14f0f',1,'OpenGLShaderProgram::Attribute']]],
+  ['auchannelstreamorder',['auChannelStreamOrder',['../structAudioUnitHelpers.html#a17acb3dac54f5f9562693ab81c15ce49',1,'AudioUnitHelpers']]],
+  ['aulayouttag',['auLayoutTag',['../structAudioUnitHelpers_1_1AUChannelStreamOrder.html#afc45e29183fc45b1bebfb7f97d8e48db',1,'AudioUnitHelpers::AUChannelStreamOrder']]],
   ['averageseconds',['averageSeconds',['../structPerformanceCounter_1_1Statistics.html#a1ddbe61fd1a766973cc19d9c3432a4c6',1,'PerformanceCounter::Statistics']]],
   ['azure',['azure',['../classColours.html#a5171f883b75e70b30df3b3b1746a8521',1,'Colours']]]
 ];

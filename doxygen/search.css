@@ -270,13 +270,12 @@ DIV.searchresults {
 }
 
 /* my tweaks */
-#MSearchBox, #MSearchSelectWindow, a.SelectItem:hover,
-#MSearchResultsWindow, .searchresult, #MSearchResults
-#MSearchResults .SRStatus, .SRSymbol, a.SRScope
+#MSearchBox , #MSearchSelectWindow , a.SelectItem:hover ,
+#MSearchResultsWindow , .searchresult , #MSearchResults ,
+#MSearchResults , .SRStatus , .SRSymbol , a.SRScope
 { background-color: #000 ; color: #d80 ; }
 
 #MSearchBox span { -webkit-filter: invert(1) ; filter: invert(1) ;
                    filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1') ; }
 
-.MSearchBoxActive #MSearchField
-{ color: #fff ; }
+#SRResults                      { color: #38F ; }

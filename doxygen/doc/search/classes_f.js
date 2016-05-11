@@ -10,6 +10,7 @@ var searchData=
   ['pixelalpha',['PixelAlpha',['../classPixelAlpha.html',1,'']]],
   ['pixelargb',['PixelARGB',['../classPixelARGB.html',1,'']]],
   ['pixelrgb',['PixelRGB',['../classPixelRGB.html',1,'']]],
+  ['pluginbusutilities',['PluginBusUtilities',['../structPluginBusUtilities.html',1,'']]],
   ['plugindescription',['PluginDescription',['../classPluginDescription.html',1,'']]],
   ['plugindirectoryscanner',['PluginDirectoryScanner',['../classPluginDirectoryScanner.html',1,'']]],
   ['pluginhosttype',['PluginHostType',['../classPluginHostType.html',1,'']]],

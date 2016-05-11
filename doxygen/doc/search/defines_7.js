@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parameter_5ftype',['PARAMETER_TYPE',['../juce__MathsFunctions_8h.html#ab17e68e410cbcdaf3074214aed490ec8',1,'juce_MathsFunctions.h']]],
-  ['point',['Point',['../juce__IncludeModuleHeaders_8h.html#a264185c815a47814791f68e7c6da85ad',1,'juce_IncludeModuleHeaders.h']]]
+  ['start_5fjuce_5fapplication',['START_JUCE_APPLICATION',['../juce__Initialisation_8h.html#a10c79cf9cafd40244a741e5945878e79',1,'juce_Initialisation.h']]],
+  ['static_5fjassert',['static_jassert',['../juce__PlatformDefs_8h.html#a0eb872d7ee75ed5bb25589dd175af725',1,'juce_PlatformDefs.h']]]
 ];

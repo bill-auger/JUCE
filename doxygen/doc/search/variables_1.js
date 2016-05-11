@@ -18,6 +18,7 @@ var searchData=
   ['buffer',['buffer',['../structAudioSourceChannelInfo.html#abed0807b4447de67b8ffd29ef2f2d2d1',1,'AudioSourceChannelInfo']]],
   ['buffersize',['bufferSize',['../structAudioDeviceManager_1_1AudioDeviceSetup.html#a2b6b158660e8f9381be469ce87232b8e',1,'AudioDeviceManager::AudioDeviceSetup']]],
   ['burlywood',['burlywood',['../classColours.html#a44803d0e7de49815d43c88d9b6042718',1,'Colours']]],
+  ['busarrangement',['busArrangement',['../classAudioProcessor.html#a23b194a1cd6eed5208a365e5ab297aa3',1,'AudioProcessor']]],
   ['bwavcodinghistory',['bwavCodingHistory',['../classWavAudioFormat.html#a5e478da650f2e1fdb3f452e9e3c2e94f',1,'WavAudioFormat']]],
   ['bwavdescription',['bwavDescription',['../classWavAudioFormat.html#a1b75b002a3b479b8f4b992a5e21f7076',1,'WavAudioFormat']]],
   ['bwavoriginationdate',['bwavOriginationDate',['../classWavAudioFormat.html#a536849856a3e84afe84dded0feb921c8',1,'WavAudioFormat']]],
