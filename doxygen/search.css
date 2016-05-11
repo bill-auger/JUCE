@@ -275,5 +275,8 @@ DIV.searchresults {
 #MSearchResults .SRStatus, .SRSymbol, a.SRScope
 { background-color: #000 ; color: #d80 ; }
 
+#MSearchBox span { -webkit-filter: invert(1) ; filter: invert(1) ;
+                   filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1') ; }
+
 .MSearchBoxActive #MSearchField
 { color: #fff ; }

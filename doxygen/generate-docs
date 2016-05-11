@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+[ "`which doxygen`" == "" ] && su -c 'apt install doxygen'
+
+doxygen
+
+cp search.css doc/search/search.css
