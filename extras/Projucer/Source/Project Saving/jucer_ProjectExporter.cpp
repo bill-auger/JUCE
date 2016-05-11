@@ -240,11 +240,14 @@ void ProjectExporter::createPropertyEditors (PropertyListBuilder& props)
 
     createExporterProperties (props);
 
-    props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
-              "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
+    if (isMakefile())
+    {
+      props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
+                "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
 
-    props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
-              "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
+      props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
+                "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
+    }
 
     props.add (new TextPropertyComponent (getUserNotes(), "Notes", 32768, true),
                "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
@@ -816,11 +819,14 @@ void ProjectExporter::BuildConfiguration::createPropertyEditors (PropertyListBui
                "Additional libraries to link (one per line). You should not add any platform specific decoration to these names. "
                "This string can contain references to preprocessor definitions in the form ${NAME_OF_VALUE}, which will be replaced with their values.");
 
-    props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
-              "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
+    if (this->exporter.isMakefile())
+    {
+      props.add(new TextPropertyComponent(getInstallRecipe() , "Install Target Recipe" , 32768 , true) ,
+                "Install Target: Defines the body of the `make install` target (leading tabs are optional).") ;
 
-    props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
-              "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
+      props.add(new TextPropertyComponent(getUninstallRecipe() , "Uninstall Target Recipe" , 32768 , true) ,
+                "Uninstall Target: Defines the body of the `make uninstall` target (leading tabs are optional).") ;
+    }
 
     props.add (new TextPropertyComponent (getUserNotes(), "Notes", 32768, true),
                "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
@@ -844,12 +850,12 @@ StringArray ProjectExporter::BuildConfiguration::getLibrarySearchPaths(String& p
 
 StringArray ProjectExporter::BuildConfiguration::getHeaderSearchPaths() const
 {
-    return getSearchPathsFromString(getConfigHeaderSearchPathString()) ;
+    return getSearchPathsFromString(getHeaderSearchPathString()) ;
 }
 
 StringArray ProjectExporter::BuildConfiguration::getLibrarySearchPaths() const
 {
-    return getSearchPathsFromString(getConfigLibrarySearchPathString()) ;
+    return getSearchPathsFromString(getLibrarySearchPathString()) ;
 }
 
 String ProjectExporter::BuildConfiguration::getGCCLibraryPathFlags(String paths_string) const
@@ -865,7 +871,7 @@ String ProjectExporter::BuildConfiguration::getGCCLibraryPathFlags(String paths_
 
 String ProjectExporter::BuildConfiguration::getGCCLibraryPathFlags() const
 {
-  return getGCCLibraryPathFlags(getConfigLibrarySearchPathString()) ;
+    return getGCCLibraryPathFlags(getLibrarySearchPathString()) ;
 }
 
 String ProjectExporter::getExternalLibraryFlags (const BuildConfiguration& config) const

@@ -256,8 +256,8 @@ private:
         }
 
         // user-defined global and per-config "Extra library search paths"
-        out << config.getGCCLibraryPathFlags (getExporterLibrarySearchPathString() + ";" +
-                                              config.getConfigLibrarySearchPathString());
+        out << config.getGCCLibraryPathFlags(getExporterLibrarySearchPathString() + ";" +
+                                             config.getLibrarySearchPathString())       ;
 
         StringArray packages;
         packages.addTokens (getExtraPkgConfigString(), " ", "\"'");
@@ -377,7 +377,7 @@ private:
 
     void writeMakefile (OutputStream& out, const Array<RelativePath>& files) const
     {
-        out << "# Automatically generated makefile, created by the Projucer" << newLine
+        out << "# Automatically generated makefile, created by the Projucer (GNU Edition)" << newLine
             << "# Don't edit this file! Your changes will be overwritten when you re-save the Projucer project!" << newLine
             << newLine;
 

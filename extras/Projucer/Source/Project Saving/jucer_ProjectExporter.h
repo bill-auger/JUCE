@@ -248,16 +248,18 @@ public:
         String getBuildConfigPreprocessorDefsString() const { return config [Ids::defines]; }
         StringPairArray getAllPreprocessorDefs() const; // includes inherited definitions
 
-        Value getConfigHeaderSearchPathValue()              { return getValue (Ids::headerPath); }
-        String getConfigHeaderSearchPathString() const      { return config [Ids::headerPath]; }
+        Value getHeaderSearchPathValue()                    { return getValue (Ids::headerPath); }
+        String getHeaderSearchPathString() const            { return config [Ids::headerPath]; }
+
         StringArray getHeaderSearchPaths(String& paths_string) const;
         StringArray getHeaderSearchPaths() const;
 
         Value getExtraCompilerFlags()                       { return getValue (Ids::extraCompilerFlags); }
         String getExtraCompilerFlagsString() const          { return config [Ids::extraCompilerFlags].toString().replaceCharacters ("\r\n", "  "); }
 
-        Value getConfigLibrarySearchPathValue()             { return getValue (Ids::libraryPath); }
-        String getConfigLibrarySearchPathString() const     { return config [Ids::libraryPath]; }
+        Value getLibrarySearchPathValue()                   { return getValue (Ids::libraryPath); }
+        String getLibrarySearchPathString() const           { return config [Ids::libraryPath]; }
+
         StringArray getLibrarySearchPaths(String& paths_string) const;
         String getGCCLibraryPathFlags(String paths_string) const;
         StringArray getLibrarySearchPaths() const;

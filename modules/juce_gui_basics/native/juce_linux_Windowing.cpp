@@ -1219,6 +1219,8 @@ private:
 
                                     e.scale = masterScale * scale;
 
+e.scale = 1.0 ;
+
                                     infos.add (e);
                                 }
                             }
