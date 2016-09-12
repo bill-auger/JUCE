@@ -509,6 +509,9 @@ void Project::createPropertyEditors (PropertyListBuilder& props)
                "Global preprocessor definitions. Use the form \"NAME1=value NAME2=value\", using whitespace, commas, or "
                "new-lines to separate the items - to include a space or comma in a definition, precede it with a backslash.");
 
+    props.add(new TextPropertyComponent(getProjectLicenseHeader() , "License Header" , 32768 , true)              ,
+              "License Header: The contents of this field will be prepended to the top of every source code file.") ;
+
     props.add (new TextPropertyComponent (getProjectUserNotes(), "Notes", 32768, true),
                "Extra comments: This field is not used for code or project generation, it's just a space where you can express your thoughts.");
 }

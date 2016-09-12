@@ -117,10 +117,16 @@ namespace CodeHelpers
 
     String makeHeaderGuardName (const File& file)
     {
+/*
         return file.getFileName().toUpperCase()
                                  .replaceCharacters (" .", "__")
                                  .retainCharacters ("_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
                 + "_INCLUDED";
+*/
+      String header_guard = file.getFileName().toUpperCase()
+                                              .replaceCharacters("." , "_")
+                                              .retainCharacters("_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789") ;
+      return "_" + header_guard + "_" ;
     }
 
     String makeBinaryDataIdentifierName (const File& file)

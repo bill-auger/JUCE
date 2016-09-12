@@ -102,6 +102,8 @@ public:
 
     Value getProjectUserNotes()                         { return getProjectValue (Ids::userNotes); }
 
+    Value getProjectLicenseHeader()                     { return getProjectValue (Ids::License); }
+
     //==============================================================================
     File getGeneratedCodeFolder() const                         { return getFile().getSiblingFile ("JuceLibraryCode"); }
     File getSourceFilesFolder() const                           { return getProjectFolder().getChildFile ("Source"); }

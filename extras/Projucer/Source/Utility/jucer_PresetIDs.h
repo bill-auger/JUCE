@@ -181,6 +181,7 @@ namespace Ids
     DECLARE_ID (colour);
     DECLARE_ID (InstallRecipe);
     DECLARE_ID (UninstallRecipe);
+    DECLARE_ID (License);
     DECLARE_ID (userNotes);
     DECLARE_ID (maxBinaryFileSize);
     DECLARE_ID (includeBinaryInAppConfig);

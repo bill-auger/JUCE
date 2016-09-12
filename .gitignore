@@ -54,3 +54,4 @@ profile
 **/Builds/AndroidStudio
 doxygen/doc
 extras/Projucer/JUCECompileEngine.dylib
+extras/Projucer/Builds/LinuxMakefile/.gdbinit

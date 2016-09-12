@@ -25,6 +25,7 @@
 #include "../jucer_Headers.h"
 #include "jucer_GeneratedCode.h"
 #include "jucer_JucerDocument.h"
+#include "../Application/jucer_Application.h"
 
 //==============================================================================
 GeneratedCode::GeneratedCode (const JucerDocument* const doc)
@@ -322,9 +323,14 @@ void GeneratedCode::applyToCode (String& code,
                                  const String& oldFileWithUserData,
                                  Project* project) const
 {
+    // custom license header
+    MainWindow* main_window = ProjucerApplication::getApp().mainWindowList.windows[0] ;
+    if (project == nullptr) project = main_window->getProjectContentComponent()->getProject() ;
+    String licenseHeader = (project != nullptr) ? project->getProjectLicenseHeader().toString() : String::empty ;
+    replaceTemplate(code , "licenseHeader" , licenseHeader) ;
+
     // header guard..
-    String headerGuard ("__JUCE_HEADER_");
-    headerGuard << String::toHexString ((className + "xx" + targetFile.getFileNameWithoutExtension()).hashCode64()).toUpperCase() << "__";
+    String headerGuard = CodeHelpers::makeHeaderGuardName(targetFile) ;
     replaceTemplate (code, "headerGuard", headerGuard);
 
     replaceTemplate (code, "version", JUCEApplicationBase::getInstance()->getApplicationVersion());
