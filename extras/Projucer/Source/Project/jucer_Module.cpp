@@ -339,6 +339,10 @@ void LibraryModule::addSettingsForModuleToExporter (ProjectExporter& exporter, P
     {
         parseAndAddLibs (exporter.linuxLibs, moduleInfo.moduleInfo ["linuxLibs"].toString());
         parseAndAddLibs (exporter.linuxPackages, moduleInfo.moduleInfo ["linuxPackages"].toString());
+
+        // do not check pkg-config for unused dependencies
+        if (!project.isConfigFlagEnabled("JUCE_USE_CURL"))
+          exporter.linuxPackages.removeString("libcurl") ;
     }
     else if (exporter.isCodeBlocks() && exporter.isWindows())
     {
