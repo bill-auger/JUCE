@@ -376,6 +376,13 @@ private:
             << newLine
             << "//==============================================================================" << newLine;
 
+        out << "#define STRING(a_var_or_id) a_var_or_id.toString()"         << newLine
+            << "#define CHARSTAR(a_string)  a_string.toStdString().c_str()" << newLine
+            << "#define UTF8(a_string)      a_string.toUTF8()"              << newLine
+            << "#define UNUSED(x)           (void)(x)"                      << newLine
+            << newLine
+            << "//==============================================================================" << newLine ;
+
         const int longestName = findLongestModuleName (modules);
 
         for (int k = 0; k < modules.size(); ++k)
